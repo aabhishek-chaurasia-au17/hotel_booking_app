@@ -28,6 +28,9 @@ mongoose.connection.on("connected", () => {
 })
 
 //middleware
+app.use((req, res, next) => {
+    res.send("Hello from middleware");
+})
 
 app.use(express.json());
 

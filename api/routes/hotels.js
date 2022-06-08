@@ -52,7 +52,10 @@ router.get("/:id", async (req, res) => {
 
 //GET ALL
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
+    console.log("hi i am Hotel route");
+    return next()
+
     try{
       const hotels =  await Hotel.find(
           req.params.id
