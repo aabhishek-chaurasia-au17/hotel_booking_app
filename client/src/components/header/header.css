@@ -12,6 +12,10 @@
     margin: 20px 0px 100px 0px;
 }
 
+.headerContainer .listmode{
+    margin: 20px 0px 0px 0px;
+}
+
 .headerList{
     display: flex;
     gap: 40px;
@@ -56,6 +60,7 @@
     border-radius: 5px;
     position: absolute;
     bottom: -25px;
+    z-index: 2;
 }
 
 .headerIcon{

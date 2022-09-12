@@ -31,7 +31,7 @@ const Header = ({type}) => {
   
   return (
     <div className='header'>
-      <div className="headerContainer">
+      <div className={type === "list" ? "headerContainer listmode" : "headerContainer"}>
       <div className="headerList">
         <div className="headerListItem active">
           <FontAwesomeIcon icon={faBed} />
@@ -54,7 +54,7 @@ const Header = ({type}) => {
           <span>Airport taxis</span>
         </div>
       </div>
-      <h1 className="headerTitel">A Lifetime of discounts? It's Genius.</h1>
+      {type !== "list" && <><h1 className="headerTitel">A Lifetime of discounts? It's Genius.</h1>
       <p className="headerDesc">Get rewarded for your travels - unlock instant saving of 10% or more with a abhibooking account</p>
       <button className='headerBtn'>Sing in / Register</button>
       <div className="headerSearch">
@@ -113,7 +113,7 @@ const Header = ({type}) => {
           <div className="headerSearchItem">
             <button className='headerBtn'>Search</button>
           </div>
-      </div>
+      </div></>}
       </div>
     </div>
   )
