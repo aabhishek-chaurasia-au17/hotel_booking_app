@@ -1,4 +1,5 @@
 import "./searchItem.css";
+import React from "react";
 
 const SearchItem = () => {
   return (
