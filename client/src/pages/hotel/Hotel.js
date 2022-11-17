@@ -1,3 +1,4 @@
+import React from 'react';
 import "./hotel.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
@@ -10,7 +11,7 @@ import {
   faCircleXmark,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
@@ -136,8 +137,8 @@ const Hotel = () => {
             </div>
           </div>
         </div>
-        {/* <MailList /> */}
-        {/* <Footer /> */}
+        <MailList />
+        <Footer />
       </div>
     </div>
   );

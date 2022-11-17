@@ -1,5 +1,5 @@
+import React from 'react';
 import "./footer.css";
-import React from "react";
 
 const Footer = () => {
   return (
@@ -45,7 +45,7 @@ const Footer = () => {
           <li className="fListItem">Terms & conditions</li>
         </ul>
       </div>
-      <div className="fText">Copyright © 2022 Abhibooking.</div>
+      <div className="fText">Copyright © 2022 Lamabooking.</div>
     </div>
   );
 };
