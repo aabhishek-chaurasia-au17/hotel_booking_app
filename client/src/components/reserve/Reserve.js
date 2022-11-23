@@ -8,7 +8,7 @@ import { SearchContext } from "../../context/SearchContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Reserve = ({setOpen, hotelId}) => {
+const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([])
   const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
 
@@ -19,23 +19,23 @@ const Reserve = ({setOpen, hotelId}) => {
   }
 
   console.log("selectedRooms", selectedRooms);
-  
+
   return (
     <div className='reserve'>
-        <div className="rContainer">
-            <FontAwesomeIcon icon={faCircleXmark} className="rClose" onClick={ () => setOpen(false)}/>
-            <span>Select your rooms: </span>
-            {data.map((item) => {
-              
-            return (<div className="rItem">
-                <div className="rItemInfo">
-                  <div className="rTitle">{item.title}</div>
-                  <div className="rDesc">{item.desc}</div>
-                  <div className="rMax">Max people: {item.maxPeople}</div>
-                  <div className="rPrice">{item.price}</div>
-                </div>
-                
-              <div className="rSelectRooms">
+      <div className="rContainer">
+        <FontAwesomeIcon icon={faCircleXmark} className="rClose" onClick={() => setOpen(false)} />
+        <span>Select your rooms: </span>
+        {data.map((item) => {
+
+          return (<div className="rItem">
+            <div className="rItemInfo">
+              <div className="rTitle">{item.title}</div>
+              <div className="rDesc">{item.desc}</div>
+              <div className="rMax">Max people: {item.maxPeople}</div>
+              <div className="rPrice">{item.price}</div>
+            </div>
+
+            <div className="rSelectRooms">
               {item.roomNumbers.map((roomNumber) => (
                 <div className="room">
                   <label>{roomNumber.number}</label>
@@ -47,10 +47,10 @@ const Reserve = ({setOpen, hotelId}) => {
                 </div>
               ))}
             </div>
-                
-              </div>)
-            })}
-        </div>
+
+          </div>)
+        })}
+      </div>
     </div>
   )
 }
