@@ -63,4 +63,8 @@ const FeaturedProperties = () => {
   );
 };
 
+<<<<<<< HEAD
 export default FeaturedProperties;
+=======
+export default FeaturedProperties;
+>>>>>>> 779239819a769a08ccb2a1e519453a6ced16aa62
