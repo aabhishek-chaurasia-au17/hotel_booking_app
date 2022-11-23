@@ -41,7 +41,7 @@ const Reserve = ({setOpen, hotelId}) => {
                   <label>{roomNumber.number}</label>
                   <input
                     type="checkbox"
-                    value={roomNumber._id}
+                    value={roomNumber?._id}
                     onChange={handleSelect}
                   />
                 </div>
