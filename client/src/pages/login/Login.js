@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import "./login.css"
 
 const Login = () => {
@@ -45,6 +45,7 @@ const Login = () => {
             class="lInput"/>
             <button disabled={loading} onClick={handleClick} className='lButton'>Login</button>
             {error && <span>{error.message}</span>}
+            <button disabled={loading} onClick={() => navigate("/register")} className='lButton'>Register</button>
         </div>
     </div>
   )

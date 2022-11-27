@@ -1,0 +1,73 @@
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lInput{
+  height: 30px;
+  padding: 10px;
+}
+
+.lButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lButton:disabled{
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.formInput {
+	 width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  flex-direction: column;
+}
+
+.formInput .imgfile{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.formInput label {
+  display: flex;
+  align-items: center;
+  gap: 10px;   
+  margin: 10px 0;
+}
+
+.formInput label .icon {
+	 cursor: pointer;
+}
+
+.formInput input {
+	 width: 100%;
+	 padding: 5px;
+	 border: none;
+	 border-bottom: 1px solid gray;
+}
+ 

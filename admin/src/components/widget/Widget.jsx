@@ -29,9 +29,9 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "order":
+    case "hotel":
       data = {
-        title: "ORDERS",
+        title: "HOTEL",
         isMoney: false,
         link: "View all orders",
         icon: (
@@ -45,9 +45,9 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "earning":
+    case "room":
       data = {
-        title: "EARNINGS",
+        title: "ROOM",
         isMoney: true,
         link: "View net earnings",
         icon: (
@@ -58,22 +58,7 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "balance":
-      data = {
-        title: "BALANCE",
-        isMoney: true,
-        link: "See details",
-        icon: (
-          <AccountBalanceWalletOutlinedIcon
-            className="icon"
-            style={{
-              backgroundColor: "rgba(128, 0, 128, 0.2)",
-              color: "purple",
-            }}
-          />
-        ),
-      };
-      break;
+
     default:
       break;
   }

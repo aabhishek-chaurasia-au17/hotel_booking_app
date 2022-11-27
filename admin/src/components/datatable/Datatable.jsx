@@ -42,7 +42,6 @@ const Datatable = ({columns}) => {
             </Link>
             <div
               className="deleteButton"
-              
               onClick={() => handleDelete(params.row._id)}
             >
               Delete
