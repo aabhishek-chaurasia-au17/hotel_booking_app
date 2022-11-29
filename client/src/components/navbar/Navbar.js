@@ -4,9 +4,13 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext)
+  const {user, dispatch} = useContext(AuthContext)
   const navigate = useNavigate();
 
+  const handleClick = () => [
+    dispatch({type: "LOGOUT"}),
+    navigate("/")
+  ]
 
   return (
     <div className="navbar">
@@ -15,7 +19,10 @@ const Navbar = () => {
         <span className="logo">myBooking.com</span>
         </Link>
         
-        {user ? user?.username : (
+        {user ? ( 
+          <div className="navItems">
+          {user?.username} <button className="navButton" onClick={() => handleClick() } >Logout</button> 
+          </div> ) : (
           <div className="navItems">
             <button className="navButton" onClick={() => navigate("/register")}>Register</button>
             <button className="navButton" onClick={() => navigate("/login")}>Login</button>

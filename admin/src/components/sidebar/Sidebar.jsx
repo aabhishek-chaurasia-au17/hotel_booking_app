@@ -18,13 +18,9 @@ import { AuthContext } from "../../context/AuthContext";
 
 const Sidebar = () => {
   const {user, loading, error, dispatch} = useContext(AuthContext)
-
-  const handleClick = () => {
-    
-    dispatch({type:"LOGOUT"})
-  }
   
   const { dispatchs } = useContext(DarkModeContext);
+  
   return (
     <div className="sidebar">
       <div className="top">
@@ -70,7 +66,7 @@ const Sidebar = () => {
           
           <li>
             <ExitToAppIcon className="icon" />
-            <span onClick={() => handleClick()}>Logout</span>
+            <span onClick={() => dispatch({type:"LOGOUT"})}>Logout</span>
           </li>
         </ul>
       </div>
